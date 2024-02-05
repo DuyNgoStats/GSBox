@@ -118,10 +118,10 @@ round(result, 2)
 ################################################################
 ################ 2 MTV X and Y have different latent sources
 ################################################################
-X.ts1 = generate_time2(module, sigma=rep(.05, trials), Sigma, M2, 2*n_channel, 
+X.ts1 = generate_time(module, sigma=rep(.05, trials), Sigma, M2, 2*n_channel, 
                        n_indpt, trials, n_time)$realization
 
-X.ts2 = generate_time2(module, sigma=rep(.05, trials), Sigma, M3, 2*n_channel, 
+X.ts2 = generate_time(module, sigma=rep(.05, trials), Sigma, M3, 2*n_channel, 
                        n_indpt, trials, n_time)$realization
 
 X.ts =  abind(X.ts1[,1:100,],X.ts2[,101:200,],along=2)
