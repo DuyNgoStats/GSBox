@@ -55,14 +55,14 @@ X.ts = X$realization
 
 cohX = array(0,dim = c(n_channel, n_channel, trials))
 for(j in 1:trials){
-  X.sim = X.ts[1:15,,j]
+  X.sim = X.ts[1:255,,j]
   f.smooth = SpectrumEstimate(X.sim, n_time, span=30, n_channel)
   cohX[,,j] = CoherenceEstimate(f.smooth,c(1:3))
 }
 
 cohY = array(0,dim = c(n_channel, n_channel, trials))
 for(j in 1:trials){
-  X.sim = X.ts[16:30,,j]
+  X.sim = X.ts[256:510,,j]
   f.smooth = SpectrumEstimate(X.sim, n_time, span=30, n_channel)
   cohY[,,j] = CoherenceEstimate(f.smooth,c(1:3))
 }
