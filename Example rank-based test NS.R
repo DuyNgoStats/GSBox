@@ -1,6 +1,7 @@
 devtools::install_local("GSBox_0.1.0.tar.gz")
 
 library(GSBox)
+library(abind)
 ################################################################
 ########### Rank-based tests for high dimension multivariate time
 ########### series.
